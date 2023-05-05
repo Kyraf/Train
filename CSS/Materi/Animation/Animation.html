@@ -1,0 +1,59 @@
+<!-- Animatiton
+Desc : Menambah animasi pada sebuah element
+Source : https://youtu.be/CCHoeJEbt-c -->
+
+<!-- [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state] -->
+
+ <!-- iteration-count : <angka>|infinite -->
+ <!-- direction : normal|reverse|alternate|alternate-reverse -->
+ <!-- fill-mode : forwards|backwards|both -->
+ <!-- play-state : running|paused -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<style>
+		.kotak {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			animation: animasiKotak 2s ease 2s infinite alternate forwards;
+		}
+
+		.kotak:hover{
+			animation-play-state: paused;
+		}
+
+		@keyframes animasiKotak {
+			/*from {
+				width: 200px;
+			}
+
+			to {
+				width: 500px;
+			}*/
+
+/*			atau*/
+
+			0% {
+				width: 200px;
+			}
+
+			50% {
+				width: 500px;
+				height: 200px;
+			}
+
+			100% {
+				width: 500px;
+				height: 500px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="kotak"></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- 
+Linear Gradien
+Desc : untuk set warna gradien atau lebih dari 1 warna dalam 1 background
+Source : https://youtu.be/7nyO5BcJjio
+ -->
+<!-- background-image|background: linear-gradient( <sudut>|<arah>(optional), <warna-1>, <warna-2>, ...<warna-n) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Linear Gradien</title>
+	<style>
+		div {
+			width: 600px;
+			height: 300px;
+			margin: 50px auto;
+		}
+		.pertama {
+			background-image: linear-gradient(white, black);
+		}	
+		.kedua {
+			background-image: linear-gradient(90deg, red, yellow, green);
+/*			atau*/
+/*			background-image: linear-gradient(to right, red, yellow, green);*/
+		}
+		.ketiga{
+			background-image: linear-gradient(-90deg, red, yellow, green);
+/*			atau*/
+/*			background-image: linear-gradient(to left, red, yellow, green);*/
+		}
+		.keempat{
+			background-image: linear-gradient(45deg, red, yellow, green);
+/*			atau*/
+/*			background-image: linear-gradient(to top right, red, yellow, green);*/
+		}
+		.kelima{
+/*			colour stop*/
+/*			hanya bisa 2 yang di stop kayanya*/
+			background-image: linear-gradient(to right, red 10%, yellow 20%, green);
+		}
+		.keenam{
+			background-image: linear-gradient(to right, red 70%, yellow 30%);	
+		}
+	</style>
+</head>
+<body>
+<div class="pertama"></div>
+<div class="kedua"></div>
+<div class="ketiga"></div>
+<div class="keempat"></div>
+<div class="kelima"></div>
+<div class="keenam"></div>
+</body>
+</html>

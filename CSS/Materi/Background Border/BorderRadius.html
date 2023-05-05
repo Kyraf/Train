@@ -1,0 +1,58 @@
+<!-- 
+Border Radius
+Desc : mengatur border dari background, image pada background, dan image pada element div
+Source : https://youtu.be/3xbW5YHln78
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>intro CSS3</title>
+	<style>
+		div {
+			width: 400px;
+			height: 300px;
+			margin: 100px auto;
+			background-color: #ff9966;
+
+/*			jika radiusnya setengah dari width dan height, maka akan membentuk lingkaran. atau jika ingin membuat 				lingkaran, ubah border radiusnya menjadi "50%"*/
+			border-radius: 20px;	
+
+/*			membuat norder radius masing" sudut*/
+			border-top-right-radius: 20px;
+			border-bottom-left-radius: 50%;
+/*			atau*/
+/*			border-radius: 20px 50% 20px 50%;*/
+
+			line-height: 300px;
+			text-align: center;
+		}
+
+		.background {
+			background-image: url('Sleep.jpg');
+
+/*			agar gambarnya tidak berulang*/
+/*			background-repeat: no-repeat;*/
+
+/*			agar gambarnya mengisi penuh 1 background*/
+			background-size: cover;
+		}
+
+		.element {
+/*			untuk membuat gambar yang keluar dari background jadi hilang*/
+			overflow: hidden;
+		}
+
+/*		untuk membuat gambar mengisis penuh background*/
+		div img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="background">hello world
+	<div class="element">
+		<img src="Sleep.jpg">
+	</div>
+</body>
+</html>

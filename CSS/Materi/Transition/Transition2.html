@@ -1,0 +1,124 @@
+<!-- Transition
+Desc : mengubah secara halus
+Source : https://youtu.be/sYbs7VHhSbY -->
+
+<!-- transition: [property] <durasi> [fungsi] [delay] -->
+
+<!-- 
+timing function:
+ease-in
+ease-out
+ease-in-out
+linear
+cubic-bezier(w, x, y, z)
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transtion</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 605px;
+			margin: 10px auto;
+			border: 2px solid black;
+		}
+
+		.kotak {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				transition: 3s;
+				margin: 5px;
+				line-height: 100px;
+				text-align: center;
+				/*				transition: margin-left 1s;*/
+		}
+
+/*		hover container tetapi yang bergerak elemen lain*/
+		.container:hover .kotak {
+			transform: rotate(360deg);
+			margin-left: 500px;
+			background-color: green;
+		}
+
+		p {
+			font-size: 50px;
+			text-align: center;
+		}
+
+		.easein{
+			transition: 3s ease-in;
+		}
+
+		.easeout{
+			transition: 3s ease-out;
+		}
+
+		.easeinout{
+			transition: 3s ease-in-out;
+		}
+
+		.linear{
+			transition: 3s linear;
+		}
+
+		
+
+/*			transition: 3s cubic-bezier(0, 0, 0, 0); masukkan dulu defaultnya lalu ubah dari inspect klik logo sebelah stylenya*/
+		.cubicbezier{
+			transition: 3s cubic-bezier(0.42, 0.15, 0.33, 1.53);
+		}
+
+		.delay {
+			transition: 3s cubic-bezier(0.42, 0.15, 0.33, 1.53) 1s, background-color 3s 3s;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="kotak"></div>
+</div>
+<p>Ease-in</p>
+<div class="container">
+	<div class="kotak easein"></div>
+</div>
+<p>Ease-out</p>
+<div class="container">
+	<div class="kotak easeout"></div>
+</div>
+<p>Ease-in-out</p>
+<div class="container">
+	<div class="kotak easeinout"></div>
+</div>
+<p>Linear</p>
+<div class="container">
+	<div class="kotak linear"></div>
+</div>
+<p>Cubic-bezier</p>
+<div class="container">
+	<div class="kotak cubicbezier"></div>
+</div>
+<p>Delay</p>
+<div class="container">
+	<div class="kotak delay"></div>
+</div>
+
+<p>All</p>
+<div class="container">
+	<div class="kotak">Ease</div>
+	<div class="kotak easein">Ease-in</div>
+	<div class="kotak easeout">Ease-out</div>
+	<div class="kotak easeinout">Ease-in-out</div>
+	<div class="kotak linear">Linear</div>
+	<div class="kotak cubicbezier">Cubic bezier</div>
+	<div class="kotak delay">Delay</div>
+</div>
+
+
+</body>
+</html>

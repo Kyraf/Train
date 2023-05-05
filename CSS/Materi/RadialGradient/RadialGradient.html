@@ -1,0 +1,45 @@
+<!-- background image: linear-gradient(circle|ellipse) <jangkauan> at <posisi-y> <posisi-x>(posisi pusat dariwarnanya), <warna-1>, ... <warna-n> -->
+<!-- jangkauan : closest|farthest-corner|side -->
+<!-- posisi-x : left, center, right, ...px -->
+<!-- posisi-y : top, center, bottom, ...px -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radial Gradients</title>
+	<style>
+	div{
+		width: 600px;
+		height: 300px;
+		margin: 50px auto;
+	}
+
+	.pertama {
+		background-image: radial-gradient(ellipse, red, blue);
+	}		
+	.kedua {
+		background-image: radial-gradient(circle, red, blue);
+	}
+	.ketiga{
+		background-image: radial-gradient(circle closest-side, red, blue);
+	}
+	.keempat{
+		background-image: radial-gradient(circle farthest-corner, red, blue);	
+	}
+	.kelima{
+		background-image: radial-gradient(circle farthest-side at top, red, blue);
+	}
+	.keenam{
+		background-image: radial-gradient(circle farthest-side at top left, red, blue);
+	}
+	</style>
+</head>
+<body>
+<div class="pertama"></div>
+<div class="kedua"></div>
+<div class="ketiga"></div>
+<div class="keempat"></div>
+<div class="kelima"></div>
+<div class="keenam"></div>
+</body>
+</html>

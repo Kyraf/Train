@@ -1,0 +1,66 @@
+<!-- 
+Box Shadow
+Desc : memberikan transparansi pada warna bukan pada elemen, tetapi warna harus pake RGB. jadi elemen dalemnya 				tidak ikut transparan
+Source : https://youtu.be/RBUHmAL2-os & https://youtu.be/ck5aAm1LK40
+ -->
+<!-- part 1 menit 8:34 -->
+<!-- inset(optional) <x-offset> <y-offset> <blur> <colour> <spread>(optional) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Shadow</title>
+	<style>
+		div {
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+		}
+
+		.pertama {
+			background-color: #39b54a;
+/*			<x-offset> <y-offset> <blur> <colour>*/
+			box-shadow: -10px 5px 5px rgba(0, 100, 0, 80%);
+/*			atau*/
+/*			box-shadow: -10px 5px 5px darkgreen;*/
+		}
+
+		.kedua {
+			background-color: blue;
+/*			<x-offset> <y-offset> <blur> <colour> <spread>*/
+/*			spread untuk size dari shadownya*/
+			box-shadow: 0px 18px 5px -10px rgb(0 0 100 / 80%);
+			
+		}
+
+		.kedua:hover{
+			box-shadow: 0px 31px 5px -10px rgb(0 0 100 / 50%);
+/*			margin-bottom: 40px;*/
+			transition: 0.3s;
+			position: relative;
+			bottom: 10px	;
+		}
+
+		.ketiga {
+			background-color: red;
+/*			inset*/
+/*			inset <x-offset> <y-offset> <blur> <colour> <spread>*/
+			box-shadow: inset 0px 0px 5px 5px rgb(100 0 0 / 80%);
+
+		}
+
+		.keempat {
+			background-color: rgb(200, 0, 200);
+/*			multiple shadow*/
+			box-shadow: 5px 5px 5px rgb(100 0 100 / 80%), -5px -5px 5px rgb(0 100 0 / 80%);
+		}
+
+	</style>
+</head>
+<body>
+<div class="pertama"></div>
+<div class="kedua"></div>
+<div class="ketiga"></div>
+<div class="keempat"></div>
+</body>
+</html>

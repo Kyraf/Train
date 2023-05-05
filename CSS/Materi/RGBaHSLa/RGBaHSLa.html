@@ -1,0 +1,46 @@
+<!-- 
+RGBa & HSLa
+Desc : memberikan transparansi pada warna bukan pada elemen, tetapi warna harus pake RGB. jadi elemen dalemnya 				tidak ikut transparan
+Source : https://youtu.be/3xtGu46cyKo
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>RGBa & HSLa</title>
+	<style>
+		body {
+			background-image: url('cloud.jpg');
+			background-size: cover;
+		}
+
+		.satu {
+			width: 300px;
+			height: 300px;
+
+/*			RGBa*/
+			background-color: rgba(255,102,0,50%);
+/*			atau*/
+/*			HSLa*/
+			background-color: hsla(24,100%,63%,50%);
+/*			hue(roda warna), saturation(semakin kecil semakin putih), lightness(semakin kecil semakin hitam)*/
+
+			position: relative;
+		}
+
+		.dua{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			position: absolute;
+			right: -50px;
+			bottom: -50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="satu">
+		<div class="dua"></div>
+	</div>
+
+</body>
+</html>

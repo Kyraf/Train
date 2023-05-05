@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Filter</title>
+	<style>
+		body {
+			text-align: center;
+		}
+
+		/*
+		Filter :
+		Blur(px)
+		Brightness(angka|%)
+		contrast(angka|%)
+		saturate(angka|%)
+		grayscale(angka|%)
+		sepia(angka|%)
+		hue-rotate(deg)
+		invert(angka|%)
+		opacity(angka|%)
+		drop-shadow(sama seperti box-shadow)
+		*/
+
+		.blur {
+			filter: blur(10px);
+		}
+
+		.brightness{
+			filter: brightness(1000%);
+		}
+
+		.contrast{
+			filter: contrast(500%);
+		}
+
+		.saturate{
+			filter: saturate(500%);
+		}
+		.grayscale{
+			filter: grayscale(500%);
+		}
+		.sepia{
+			filter: sepia(500%);
+		}
+		.hue-rotate{
+			filter: hue-rotate(90deg);
+		}
+		.invert{
+			filter: invert(500%);
+		}
+		.opacity{
+			filter: opacity(50%);
+		}
+		.dropshadow{
+			filter: drop-shadow(5px 5px 5px black);
+		}
+	</style>
+</head>
+<body>
+<img src="photo.jpg" alt="WPU">	
+<h1>Blur</h1>
+<img class="blur" src="photo.jpg" alt="WPU">
+<h1>Brightness</h1>
+<img class="brightness" src="photo.jpg" alt="WPU">
+<h1>Contrast</h1>
+<img class="contrast" src="photo.jpg" alt="WPU">
+<h1>Saturate</h1>
+<img class="saturate" src="photo.jpg" alt="WPU">
+<h1>Grayscale</h1>
+<img class="grayscale" src="photo.jpg" alt="WPU">
+<h1>Sepia</h1>
+<img class="sepia" src="photo.jpg" alt="WPU">
+<h1>Hue-rotate</h1>
+<img class="hue-rotate" src="photo.jpg" alt="WPU">
+<h1>Invert</h1>
+<img class="invert" src="photo.jpg" alt="WPU">
+<h1>Opacity</h1>
+<img class="opacity" src="photo.jpg" alt="WPU">
+<h1>Drop-shadow</h1>
+<h1 class="dropshadow">WPU</h1>
+<img class="dropshadow" src="photo.jpg" alt="WPU">
+</body>
+</html>

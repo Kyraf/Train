@@ -1,0 +1,69 @@
+<!-- Transform
+Desc : mengubah posisi, rotasi atau besar dari element
+Source : https://youtu.be/aSEwsgZCvxs -->
+
+<!-- trasform: <fungsi>; -->
+
+<!-- 
+scale(angka), scaleX(angka), scaleY(angka), scale(angkaX, angkaY),
+rotate(deg), rotateX(deg), rotateY(deg), 
+skew(deg), skewX(deg), skewY(deg),
+translate(px), translateX(px), translateY(px), 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: lightblue;
+			margin: 50px auto 0;
+		}
+
+		p{
+			font-size: 20px;
+			text-align: center;
+		}
+
+		.scale:hover {
+			transform: scale(0.5);
+			transition: 1s;
+/*			mengubah besarnya menjadi setengah dari ukuran awal*/
+/*			transform: scale(2);*/
+/*			membesarkan ukuran 2 kali lipat*/
+		}
+
+		.rotate:hover {
+			transform: rotate(45deg) rotateX(-180deg);
+			transition: 1s;
+		}
+
+		.skew:hover {
+			transform: skewY(10deg);
+/*			transform: skew(10deg)|skewX(10deg);*/
+			transition: 1s;
+		}
+
+		.translate:hover {
+			transform: translate(50px, 50px);
+			transition: 1s;	
+		}
+
+	</style>
+</head>
+<body>
+<div class="kotak"></div>
+<p>scale</p>
+<div class="scale"></div>
+<p>rotate</p>
+<div class="rotate"></div>
+<p>skew</p>
+<div class="skew"></div>
+<p>translate</p>
+<div class="translate"></div>
+
+</body>
+</html>
